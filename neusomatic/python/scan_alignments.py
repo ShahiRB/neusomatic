@@ -34,7 +34,7 @@ def run_scan_alignments((work, reference, scan_alignments_binary, split_region_f
             os.mkdir(work)
         if len(pybedtools.BedTool(split_region_file)) > 0:
             cmd = "{} --ref {} -b {} -L {} --out_vcf_file {}/candidates.vcf --out_count_file {}/count.bed \
-                        --window_size {} --min_af {} --min_mapq {} --num_thread {}".format(
+                        --window_size {} --min_af {} --min_mapq {} --num_thread {} --verbosity 9".format(
                 scan_alignments_binary, reference, input_bam, split_region_file,
                 work, work, window_size, maf, min_mapq, num_threads)
             if calc_qual:
