@@ -104,7 +104,7 @@ int main(int argc, char **argv) {
       const auto& ginv = targeted_region.first; 
       auto& records = targeted_region.second;
       GInvStdString ginvstr(bam_header.IDtoName(ginv.contig()), ginv.left(), ginv.right());
-      if (cnt_region % 100 == 0){
+      if (cnt_region % 1 == 0){
         std::cerr<<"#On region "<<ginvstr<<"\n";
         std::cerr<<"#Aligned read number: "<<records.size()<<std::endl;
       }
