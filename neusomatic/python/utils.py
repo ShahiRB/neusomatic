@@ -24,7 +24,7 @@ def run_shell_command(command, stdout=None, stderr=None, run_logger=None):
     if run_logger:
         my_logger = run_logger
 
-    fixed_command = shlex.split(command)
+    # fixed_command = shlex.split(command)
     # my_logger.info("Running command: {}".format(fixed_command))
     # returncode = subprocess.check_call(
     #     fixed_command)
