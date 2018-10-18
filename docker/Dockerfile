@@ -38,7 +38,6 @@ RUN conda install -y pysam=${PYSAM_VERSION} pybedtools=${PYBEDTOOLS_VERSION} \
 
 RUN apt-get install -y --fix-missing gcc-${GCC_VERSION} g++-${GCC_VERSION}
 
-ENV NEUSOMATIC_VERSION 0.1.1 
 ADD https://github.com/bioinform/neusomatic/archive/test_docker.tar.gz /opt/test_docker.tar.gz 
 RUN cd /opt/ && tar -xzvf test_docker.tar.gz && mv neusomatic-test_docker neusomatic && rm /opt/test_docker.tar.gz
 RUN cd /opt/neusomatic/ && ./build.sh 
